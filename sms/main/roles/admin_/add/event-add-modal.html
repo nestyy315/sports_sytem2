@@ -1,0 +1,69 @@
+<!-- Add Event Modal -->
+<div class="modal fade" id="addEventModal" tabindex="-1" aria-labelledby="addEventModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addEventModalLabel">Add Event</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="form-add-event" method="POST" action="/new/sports_system/sms/main/roles/admin_/add/event-add.php" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <!-- Event Name -->
+                    <div class="mb-3">
+                        <label for="event_name" class="form-label">Event Name</label>
+                        <input type="text" class="form-control" name="event_name" id="event_name" required>
+                    </div>
+
+                    <!-- Event Start Date -->
+                    <div class="mb-3">
+                        <label for="event_start_date" class="form-label">Event Start Date</label>
+                        <input type="date" class="form-control" name="event_start_date" id="event_start_date" required>
+                    </div>
+
+                    <!-- Event End Date -->
+                    <div class="mb-3">
+                        <label for="event_end_date" class="form-label">Event End Date</label>
+                        <input type="date" class="form-control" name="event_end_date" id="event_end_date" required>
+                    </div>
+
+                    <!-- Event Location -->
+                    <div class="mb-3">
+                        <label for="event_location" class="form-label">Event Location</label>
+                        <input type="text" class="form-control" name="event_location" id="event_location" required>
+                    </div>
+
+                    <!-- Event Description -->
+                    <div class="mb-3">
+                        <label for="event_description" class="form-label">Event Description</label>
+                        <textarea class="form-control" name="event_description" id="event_description" required></textarea>
+                    </div>
+
+                    <!-- School Year -->
+                    <div class="mb-3">
+                        <label for="school_year" class="form-label">School Year</label>
+                        <input type="text" class="form-control" name="school_year" id="school_year" required>
+                    </div>
+
+                    <!-- Event Image Upload -->
+                    <div class="mb-3">
+                        <label for="event_image" class="form-label">Event Image</label>
+                        <input type="file" class="form-control" name="event_image" id="event_image" accept="image/*">
+                    </div>
+
+                    <!-- Published Status -->
+                    <div class="mb-3">
+                        <label for="published" class="form-label">Published</label>
+                        <select class="form-select" name="published" id="published" required>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Add Event</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
